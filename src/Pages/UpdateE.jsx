@@ -1,9 +1,9 @@
 import React from 'react'
 import "./create.css";
-export const Read = () => {
+export const UpdateE = () => {
   return (
     <>
-    <div>Read</div>
+    <div>UpdateE</div>
     </>
   );
 };

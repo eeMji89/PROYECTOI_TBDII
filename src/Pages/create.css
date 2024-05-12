@@ -26,31 +26,32 @@
      #basicos{
         
         border:10px;
-        border-color: #45a049;
         border-width: 10px;
-        width: 100%;
+        width: 90%;
+        margin-bottom: 10%;
        
     }
     #main_b{       
-        border:10px;
-        border-color: #45a049;
-        border-width: 10px;
         width: 100%;
-        min-height: 500px;
-        
+        border: 1px solid #3a0335;
     }
+
     #bsc_1{
         margin-top: 5%;
         margin-right: 1%;
-        max-width: 47%;
+        max-width: 45%;
         float: left;
-
     }
+
     #bsc_2{
-        margin-top: 10%;
+        margin-top: 6.8%;
         margin-left: 1%;
-        max-width: 47%;
-        float: right;
+        max-width: 45%;
+        float: left;
+    }
+
+    #laborales{
+        margin-top: 30%;
     }
     label {
         font-weight: bold;

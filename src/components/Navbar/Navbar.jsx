@@ -15,27 +15,29 @@ export const Navbar = () => {
                 <span></span>
                 <span></span>
             </div>
+            <div className="bot">
             <ul id= "botones" className={menuOpen ? "open" : ""}>
                 <div class="dropdown">
                     <button class="dropbtn">Solicitante</button>
                     <div class="dropdown-content">
-                    <NavLink to="/Create">About</NavLink>
-                    <NavLink to="/Create">About</NavLink>
-                    <NavLink to="/Create">About</NavLink>
-                    <NavLink to="/Create">About</NavLink>
+                    <NavLink to="/Create">Crear Usuario</NavLink>
+                    <NavLink to="/Read">Leer</NavLink>
+                    <NavLink to="/Remove">Eliminar</NavLink>
+                    <NavLink to="/Update">Actualizar</NavLink>
                     </div>
                 </div>
 
                 <div class="dropdown">
                     <button class="dropbtn">Empresa</button>
                     <div class="dropdown-content">
-                    <NavLink to="/Create">About</NavLink>
-                    <NavLink to="/Create">About</NavLink>
-                    <NavLink to="/Create">About</NavLink>
-                    <NavLink to="/Create">About</NavLink>
+                    <NavLink to="/CrearE">Crear Empresa</NavLink>
+                    <NavLink to="/ReadE">Leer Empresa</NavLink>
+                    <NavLink to="/RemoveE">Eliminar Empresa</NavLink>
+                    <NavLink to="/UpdateE">Actualizar Empresa</NavLink>
                     </div>
                 </div>
             </ul>
+            </div>
         </nav>
     );
 };

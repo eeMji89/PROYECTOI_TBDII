@@ -1,7 +1,9 @@
 import React from 'react';
-
-export default function update() {
+import "./create.css";
+export const Update = () => {
   return (
+    <>
     <div><p>update</p></div>
-  )
-}
+    </>
+  );
+};

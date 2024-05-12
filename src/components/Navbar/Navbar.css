@@ -51,21 +51,34 @@
   .dropdown:hover .dropbtn {background-color: #ddd;}
 
 nav {
-    display: flex;
     justify-content: space-between;
     align-items: center;
+    height: 10%;
     background-color: #bdbdbd;
     color: black;
     position: sticky;
     top: 0;
+    width: 100%;
+}
+
+.menu{
+    max-width: 10%;
+}
+
+.bot{
+    margin-top: 1%;
+    max-width: 40%;
+    float: right;
+    margin-right: 3.5%;
 }
 
 nav .title {
     font-size: 1.5rem;
-    margin: 1rem;
     font-weight: bold;
     text-decoration: none;
-    color: black;
+    color: #154bb6;
+    position: absolute;
+    margin-top: 1.5%;
 }
 
 nav ul {

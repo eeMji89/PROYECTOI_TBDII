@@ -12,7 +12,7 @@ export const ReadE = () => {
                     <label for="nombre_empresa">Nombre Empresa:</label>
                     <label for="cif">CIF:</label>
                     <label for="id_director">ID del Director:</label>
-                    <label for="dni">DNI:</label>
+                    <label for="direccion">Direcciocuten:</label>
                     <label for="dni">DNI:</label>
                     <label for="dni">DNI:</label>
                     <label for="dni">DNI:</label>

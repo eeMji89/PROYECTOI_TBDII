@@ -3,7 +3,14 @@ import "./create.css";
 export const Read = () => {
   return (
     <>
-    <div>Read</div>
+    <form id="registroFrom" >
+                <h2>Leer Datos Solicitante</h2>
+
+                <form id="basicos">
+                    <div id="main_b">
+                    </div>
+                </form>
+            </form>
     </>
   );
 };

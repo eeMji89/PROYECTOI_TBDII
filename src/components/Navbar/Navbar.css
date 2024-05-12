@@ -76,9 +76,10 @@ nav .title {
     font-size: 1.5rem;
     font-weight: bold;
     text-decoration: none;
-    color: #154bb6;
+    color: black;
     position: absolute;
     margin-top: 1.5%;
+    margin-left: 2%;
 }
 
 nav ul {

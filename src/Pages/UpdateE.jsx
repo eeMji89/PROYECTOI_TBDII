@@ -3,7 +3,14 @@ import "./create.css";
 export const UpdateE = () => {
   return (
     <>
-    <div>UpdateE</div>
+    <form id="registroFrom" >
+                <h2>Actualizar Datos Empresa</h2>
+
+                <form id="basicos">
+                    <div id="main_b">
+                    </div>
+                </form>
+            </form>
     </>
   );
 };

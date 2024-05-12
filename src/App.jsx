@@ -14,7 +14,7 @@ function App() {
         <Route path="/Update" element={<Update />} />
         <Route path="/CrearE" element={<CrearE />} />
         <Route path="/ReadE" element={<ReadE />} />
-        <Route path="/RemoverE" element={<RemoveE />} />
+        <Route path="/RemoveE" element={<RemoveE />} />
         <Route path="/UpdateE" element={<UpdateE />} />
       </Routes>
   </div>

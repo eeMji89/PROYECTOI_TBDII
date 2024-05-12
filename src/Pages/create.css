@@ -29,7 +29,6 @@
         border-width: 10px;
         width: 90%;
         margin-bottom: 10%;
-       
     }
     #main_b{       
         width: 100%;
@@ -80,4 +79,24 @@
     .btn-container {
         text-align: center;
         margin-top: 20px; /* Espacio entre el formulario y el botón */
+    }
+
+    #principalesE{
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 2%;
+        margin-bottom: 2%;
+    }
+
+    textarea{
+        width: 100%;
+        min-height: 10%;
+        height: 10%;
+        border-radius: 5px;
+    }
+
+    #basicosE{
+        border:10px;
+        border-width: 10px;
+        width: 90%;
     }

@@ -6,3 +6,4 @@ export * from "./CrearE";
 export * from "./ReadE";
 export * from "./RemoveE";
 export * from "./UpdateE";
+export * from "./CreateP";

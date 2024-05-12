@@ -1,7 +1,7 @@
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import { Navbar } from "./components/Navbar/Navbar";
-import {Create, CrearE, Read, ReadE, Remove, RemoveE, Update, UpdateE} from "./Pages";
+import {Create, CrearE, Read, ReadE, Remove, RemoveE, Update, UpdateE, CreateP} from "./Pages";
 
 function App() {
   return (
@@ -16,6 +16,7 @@ function App() {
         <Route path="/ReadE" element={<ReadE />} />
         <Route path="/RemoveE" element={<RemoveE />} />
         <Route path="/UpdateE" element={<UpdateE />} />
+        <Route path="/CreateP" element={<CreateP />} />
       </Routes>
   </div>
   );

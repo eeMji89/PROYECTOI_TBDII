@@ -34,6 +34,7 @@ export const Navbar = () => {
                     <NavLink to="/ReadE">Leer Empresa</NavLink>
                     <NavLink to="/RemoveE">Eliminar Empresa</NavLink>
                     <NavLink to="/UpdateE">Actualizar Empresa</NavLink>
+                    <NavLink to="/CreateP">Crear Puesto</NavLink>
                     </div>
                 </div>
             </ul>

@@ -1,7 +1,59 @@
 import React from 'react';
 import "./create.css";
-
+import { MemcacheClient,  MultiRetrievalResponse,
+    MultiCasRetrievalResponse,
+    StatsCommandResponse, } from "memcache-client";
 export const CrearE = () => {
+    onst [empresaData, setEmpresaData] = useState({
+        id_empresa: "",
+        nombre_empresa: "",
+        cif: "",
+        direccion: "",
+        correo: "",
+        telefono: "",
+        fecha_creacion: ""
+      });
+    
+      const handleChange = (e) => {
+        const { name, value } = e.target;
+        setEmpresaData((prevData) => ({
+          ...prevData,
+          [name]: value
+        }));
+      };
+    
+      const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        const server = "tbddiicache-qwza0y.serverless.use1.cache.amazonaws.com:11211";
+        const client = new MemcacheClient({ server });
+    
+        try {
+          // Almacenar datos de empresa en Memcached
+          await client.set(empresaData.id_empresa, JSON.stringify(empresaData));
+          console.log("Datos de empresa almacenados en Memcached");
+    
+          // Limpiar los campos del formulario después de enviar
+          setEmpresaData({
+            id_empresa: "",
+            nombre_empresa: "",
+            cif: "",
+            direccion: "",
+            correo: "",
+            telefono: "",
+            fecha_creacion: ""
+          });
+    
+          alert("Los datos se han almacenado correctamente en Memcached.");
+        } catch (error) {
+          console.error("Error al almacenar datos en Memcached:", error);
+          alert("Ha ocurrido un error al intentar almacenar los datos en Memcached.");
+        } finally {
+          // Desconectar del servidor Memcached
+          client.shutdown();
+        }
+      };
+    
     return (
         <>
             <form id="registroFrom" >
@@ -34,3 +86,4 @@ export const CrearE = () => {
         </>
     );
 };
+

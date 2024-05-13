@@ -21,9 +21,7 @@ export const Navbar = () => {
                     <button class="dropbtn">Solicitante</button>
                     <div class="dropdown-content">
                     <NavLink to="/Create">Crear Usuario</NavLink>
-                    <NavLink to="/Read">Leer</NavLink>
-                    <NavLink to="/Remove">Eliminar</NavLink>
-                    <NavLink to="/Update">Actualizar</NavLink>
+                    <NavLink to="/Read">Buscar</NavLink>
                     </div>
                 </div>
 
@@ -31,9 +29,7 @@ export const Navbar = () => {
                     <button class="dropbtn">Empresa</button>
                     <div class="dropdown-content">
                     <NavLink to="/CrearE">Crear Empresa</NavLink>
-                    <NavLink to="/ReadE">Leer Empresa</NavLink>
-                    <NavLink to="/RemoveE">Eliminar Empresa</NavLink>
-                    <NavLink to="/UpdateE">Actualizar Empresa</NavLink>
+                    <NavLink to="/ReadE">Buscar Empresa</NavLink>
                     <NavLink to="/CreateP">Crear Puesto</NavLink>
                     </div>
                 </div>

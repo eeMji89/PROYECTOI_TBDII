@@ -11,7 +11,7 @@
     }
     
 
-    form {
+    form, div.create {
         max-width: 100%;
         margin: 20px auto;
         padding: 20px;
@@ -20,8 +20,6 @@
         background-color: #f9f9f9;
         margin-left: 5%;
         margin-right: 5%;
-      
-        
     }
      #basicos{
         

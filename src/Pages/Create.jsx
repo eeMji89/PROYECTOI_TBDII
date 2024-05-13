@@ -7,10 +7,10 @@ export const Create = () => {
      <form id="registroFrom" >
         <h2>Registro de Persona</h2>
 
-        <form id="basicos">
-          <div id="main_b">
-            <div id="bsc_1">
-            <h3>Datos Básicos</h3>
+        <div className="create">
+            <div id="main_b">
+                <div id="bsc_1">
+                    <h3>Datos Básicos</h3>
                     <label for="dni">DNI:</label>
                     <input type="text" id="dni" name="dni" onchange={e=>{setDni(e.target.value);} } required/>
                     <label for="primer_nombre">Primer Nombre:</label>
@@ -28,8 +28,8 @@ export const Create = () => {
                         <option value="Masculino">Masculino</option>
                         <option value="Femenino">Femenino</option>
                     </select>
-            </div>
-            <div id="bsc_2">
+                </div>
+                <div id="bsc_2">
                     <label for="direccion">Dirección:</label>
                     <input type="text" id="direccion" name="direccion" required/>
 
@@ -42,10 +42,10 @@ export const Create = () => {
                     <label for="nacionalidad">Nacionalidad:</label>
                     <input type="text" id="nacionalidad" name="nacionalidad" required/>
                 </div>
-          </div>
-        </form>
+            </div>
+        </div>
 
-        <form id="laborales">
+        <div className="create" id="laborales">
             <div>
                 <h3>Datos Laborales</h3>
                 <label for="empresa">Hisotrial Laboral:</label>
@@ -54,9 +54,9 @@ export const Create = () => {
                     la fecha en la que empezo a trabajar y la fecha en la que terminó</div>
                 <input type="text" id="historial" name="historial" required/>
             </div>
-        </form>
+        </div>
 
-        <form id="profesionales">
+        <div className="create">
             <h3>Datos Profesionales</h3>
             <label for="conocimiento_profesional">Conocimiento Profesional:</label>
             <input type="text" id="conocimiento_profesional" name="conocimiento_profesional" required/>
@@ -66,9 +66,9 @@ export const Create = () => {
             <label for="certificacion">Certificación:</label>
             <input type="text" id="certificacion" name="certificacion" required/>
             <div id="reqd" class="form-text">Ingrese certificados adicionales obtenidos</div>
-        </form>
+        </div>
 
-        <form id="academicos">
+        <div className="create">
             <h3>Datos Académicos</h3>
             <label for="institucion">Institución:</label>
             <input type="text" id="institucion" name="institucion" required/>
@@ -80,9 +80,9 @@ export const Create = () => {
             <input type="number" id="añograduacion" name="añograduacion" required/>
             <label for="indice_academico">Índice Académico:</label>
             <input type="number" id="indice_academico" name="indice_academico" required/>
-        </form>
+        </div>
 
-        <form id="Legales">
+        <div className="create">
             <h3>Datos Legales</h3>
             <label for="estado_civil">Estado Civil:</label>
             <input type="text" id="estado_civil" name="estado_civil" required/>
@@ -92,9 +92,9 @@ export const Create = () => {
             <input type="text" id="serviciomilitar" name="serviciomilitar" required/>
             <label for="relacionjusticia">Relación con la Justicia:</label>
             <input type="text" id="relacionjusticia" name="relacionjusticia" required/>
-        </form>
+        </div>
 
-        <form id="sanitarios">
+        <div className="create">
             <h3>Datos Sanitarios</h3>
             <label for="gruposanguineo">Grupo Sanguíneo:</label>
             <input type="text" id="gruposanguineo" name="gruposanguineo" required/>
@@ -103,9 +103,9 @@ export const Create = () => {
             <label for="condicionesmedicas_discapacidades">Condiciones Médicas o Discapacidades:</label>
             <input type="text" id="condicionesmedicas_discapacidades" name="condicionesmedicas_discapacidades" required/>
             <div id="reqd" class="form-text">En caso de no tener escriba Ninguna</div>
-        </form>
+        </div>
 
-        <form>
+        <div className="create">
             <h3>Condiciones de Empleo</h3>
             <label for="tipoContratoCond">Tipo de Contrato:</label>
             <input type="text" id="tipoContratoCond" name="tipoContratoCond" required/>
@@ -119,7 +119,8 @@ export const Create = () => {
                 <input type="text" class="form-control" id="descripcion_req" aria-describedby="reqd"/>
                 <div id="reqd" class="form-text">Escriba algun requisto adicional</div>
             </div>
-        <form id="familiar">
+            </div>
+        <div className="create">
             <label for="tiene_familiar">¿Tiene un familiar buscando empleo?</label>
             <div id="formularioFamiliar" >
                 <h3>Datos del Familiar</h3>
@@ -128,15 +129,13 @@ export const Create = () => {
                 <label for="parentesco">Parentesco:</label>
                 <input type="text" id="parentesco" name="parentesco" required/>
             </div>
-        </form>
+        
 
         <div class="btn-container">
             <button type="submit" class="btn btn-primary">Añadir</button>
         </div>
+        </div>
         </form>
-
-
-      </form>
      </>
   );
 };

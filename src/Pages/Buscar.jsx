@@ -2,8 +2,13 @@ import './Buscar.css';
 import "bootstrap/dist/css/bootstrap.min.css"
 import "bootstrap/dist/js/bootstrap.min.js"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faHomeLgAlt, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
+import { Update } from './Update';
+import { UpdateE } from './UpdateE';
+import { Routes } from 'react-router';
+import { Link, NavLink } from "react-router-dom";
+
 
 const Buscar = (params) => {
 
@@ -12,6 +17,10 @@ const Buscar = (params) => {
   const [mostrarTabla, setMostrarTabla] = useState(false);
   const [mostrarTablaE, setMostrarTablaE] = useState(false);
   const [mostrarAlertaElim, setMostrarAlertaElim] = useState(false);
+
+  const url = `/Update?idupdate=${busqueda}`;
+  const url2 = `/UpdateE?idupdate=${busqueda}`;
+
   const handleChange = (event) => {
     setBusqueda(event.target.value);
   };
@@ -20,23 +29,38 @@ const Buscar = (params) => {
     setMostrarTabla(false)
     setMostrarTablaE(false)
   };
-  const {titulo} = params;
+  const { titulo } = params;
 
   const handleButtonClick = () => {
     //aqui va el codigo para buscarlo en la base
     let encontrado = true
-    if (busqueda === "12151028") {
+    if (localStorage) {
       if (titulo === "usuario") {
         setMostrarTabla(true);
       } else {
         setMostrarTablaE(true);
       }
+      setMostrarAlertaElim(false);
       setMostrarAlerta(false);
     } else {
       setMostrarTabla(false);
       setMostrarTablaE(false);
       setMostrarAlerta(true);
+      setMostrarAlertaElim(false);
     }
+  };
+
+  const editar = () => {
+    <NavLink to="/Update">Actualizar</NavLink>
+    // <Routes>
+    //   <Route path="/Create" element={<Create />} />
+    //   <Route path="/Read" element={<Read />} />
+    //   {/*<Route path="/Update" element={<Update/>}/>*/}
+    //   <Route path="/CrearE" element={<CrearE />} />
+    //   <Route path="/ReadE" element={<ReadE />} />
+    //   {/*<Route path="/UpdateE" element={<UpdateE />} /> */}
+    //   <Route path="/CreateP" element={<CreateP />} />
+    // </Routes>
   };
 
   return (
@@ -77,7 +101,8 @@ const Buscar = (params) => {
               <td>Iraheta</td>
               <td>97315378</td>
               <td>
-                <button type="button" class="btn btn-warning">Editar</button>
+                <NavLink to={url}>Editar</NavLink>
+                {/*<button type="button" class="btn btn-warning" onClick={editar}>Editar</button>*/}
                 <text> </text>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">Eliminar</button>
               </td>
@@ -103,7 +128,8 @@ const Buscar = (params) => {
               <td>Iraheta</td>
               <td>97315378</td>
               <td>
-                <button type="button" class="btn btn-warning">Editar</button>
+                <NavLink to={url2}>Editar</NavLink>
+                {/*<button type="button" class="btn btn-warning">Editar</button>*/}
                 <text> </text>
                 <button type="button" class="btn btn-danger" data-bs-toggle="modal" data-bs-target="#modalEliminar">Eliminar</button>
               </td>

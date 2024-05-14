@@ -1,10 +1,68 @@
 import React, { useState } from "react";
-import { MemcacheClient,  MultiRetrievalResponse,
-    MultiCasRetrievalResponse,
-    StatsCommandResponse, } from "memcache-client";
-import "./create.css";
+// import { MemcacheClient,  MultiRetrievalResponse,
+//     MultiCasRetrievalResponse,
+//     StatsCommandResponse, } from "memcache-client";
+ import "./create.css";
 
-export const Create = () => {
+export const Create = (params) => {
+   {/*} const handleSubmit = async (e) => {
+        e.preventDefault();
+  
+        const server = "tbddiicache-qwza0y.serverless.use1.cache.amazonaws.com:11211";
+        const client = new MemcacheClient({ server });
+  
+        try {
+          // Almacenar datos de persona en Memcached
+          await client.set(personaData.dni, JSON.stringify(personaData));
+          console.log("Datos de persona almacenados en Memcached");
+  
+          // Limpiar los campos del formulario después de enviar
+          setPersonaData({
+            dni: "",
+            primerNombre: "",
+            primerApellido: "",
+            fechaNac: "",
+            genero: "",
+            direccion: "",
+            celular: "",
+            correo: "",
+            nacionalidad: "",
+            historial: "",
+            conocimientoProfesional: "",
+            habilidades: "",
+            certificacion: "",
+            institucion: "",
+            titulo: "",
+            especialidad: "",
+            añoGraduacion: "",
+            indiceAcademico: "",
+            estadoCivil: "",
+            antecedentesPenales: "",
+            servicioMilitar: "",
+            relacionJusticia: "",
+            grupoSanguineo: "",
+            alergias: "",
+            condicionesMedicasDiscapacidades: "",
+            tipoEmpleo: "",
+            tipoContrato: "",
+            salario: "",
+            requisitosAdicionales: "",
+            tieneFamiliar: "",
+            dniFamiliar: "",
+            parentesco: ""
+          });
+  
+          alert("Los datos se han almacenado correctamente en Memcached.");
+        } catch (error) {
+          console.error("Error al almacenar datos en Memcached:", error);
+          alert("Ha ocurrido un error al intentar almacenar los datos en Memcached.");
+        } finally {
+          // Desconectar del servidor Memcached
+          client.shutdown();
+        }
+      };*/}
+    const {guardar} = params
+
     const [personaData, setPersonaData] = useState({
       dni: "",
       primerNombre: "",
@@ -46,68 +104,13 @@ export const Create = () => {
         ...prevData,
         [name]: value
       }));
+      setPersonaData.id
     };
 
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-
-      const server = "tbddiicache-qwza0y.serverless.use1.cache.amazonaws.com:11211";
-      const client = new MemcacheClient({ server });
-
-      try {
-        // Almacenar datos de persona en Memcached
-        await client.set(personaData.dni, JSON.stringify(personaData));
-        console.log("Datos de persona almacenados en Memcached");
-
-        // Limpiar los campos del formulario después de enviar
-        setPersonaData({
-          dni: "",
-          primerNombre: "",
-          primerApellido: "",
-          fechaNac: "",
-          genero: "",
-          direccion: "",
-          celular: "",
-          correo: "",
-          nacionalidad: "",
-          historial: "",
-          conocimientoProfesional: "",
-          habilidades: "",
-          certificacion: "",
-          institucion: "",
-          titulo: "",
-          especialidad: "",
-          añoGraduacion: "",
-          indiceAcademico: "",
-          estadoCivil: "",
-          antecedentesPenales: "",
-          servicioMilitar: "",
-          relacionJusticia: "",
-          grupoSanguineo: "",
-          alergias: "",
-          condicionesMedicasDiscapacidades: "",
-          tipoEmpleo: "",
-          tipoContrato: "",
-          salario: "",
-          requisitosAdicionales: "",
-          tieneFamiliar: "",
-          dniFamiliar: "",
-          parentesco: ""
-        });
-
-        alert("Los datos se han almacenado correctamente en Memcached.");
-      } catch (error) {
-        console.error("Error al almacenar datos en Memcached:", error);
-        alert("Ha ocurrido un error al intentar almacenar los datos en Memcached.");
-      } finally {
-        // Desconectar del servidor Memcached
-        client.shutdown();
-      }
-    };
 
     return (
       <>
-       <form id="registroFrom" onSubmit={handleSubmit}>
+       <form id="registroFrom" >
           <h2>Registro de Persona</h2>
 
           <div className="create">
@@ -228,13 +231,13 @@ export const Create = () => {
               <div id="formularioFamiliar" >
                   <h3>Datos del Familiar</h3>
                   <label for="dni_familiar">DNI del Familiar:</label>
-                  <input type="text" id="dni_familiar" name="dniFamiliar" value={personaData.dniFamiliar} onChange={handleChange} required/>
+                  <input type="text" id="dni_familiar" name="dniFamiliar" value={personaData.dniFamiliar} onChange={handleChange} />
                   <label for="parentesco">Parentesco:</label>
-                  <input type="text" id="parentesco" name="parentesco" value={personaData.parentesco} onChange={handleChange} required/>
+                  <input type="text" id="parentesco" name="parentesco" value={personaData.parentesco} onChange={handleChange}/>
               </div>
           </div>
           <div class="btn-container">
-              <button type="submit" class="btn btn-primary">Añadir</button>
+              <button type="submit" class="btn btn-primary" onClick={()=>guardar(personaData)}>Añadir</button>
           </div>
       </form>
        </>

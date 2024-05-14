@@ -6,6 +6,7 @@ export const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
     return (
+
         <nav>
             <Link to="/" className="title">
                 Grupo 4
@@ -16,26 +17,26 @@ export const Navbar = () => {
                 <span></span>
             </div>
             <div className="bot">
-            <ul id= "botones" className={menuOpen ? "open" : ""}>
-                <div class="dropdown">
-                    <button class="dropbtn">Solicitante</button>
-                    <div class="dropdown-content">
-                    <NavLink to="/Create">Crear Usuario</NavLink>
-                    <NavLink to="/Read">Buscar</NavLink>
-                    <NavLink to="/Update">Actualizar</NavLink>
+                <ul id="botones" className={menuOpen ? "open" : ""}>
+                    <div class="dropdown">
+                        <button class="dropbtn">Solicitante</button>
+                        <div class="dropdown-content">
+                            <NavLink to="/Create">Crear Usuario</NavLink>
+                            <NavLink to="/Read">Buscar</NavLink>
+                            {/*<NavLink to="/Update">Actualizar</NavLink>*/}
+                        </div>
                     </div>
-                </div>
 
-                <div class="dropdown">
-                    <button class="dropbtn">Empresa</button>
-                    <div class="dropdown-content">
-                    <NavLink to="/CrearE">Crear Empresa</NavLink>
-                    <NavLink to="/ReadE">Buscar Empresa</NavLink>
-                    <NavLink to="/UpdateE">Actualizar Empresa</NavLink>
-                    <NavLink to="/CreateP">Crear Puesto</NavLink>
+                    <div class="dropdown">
+                        <button class="dropbtn">Empresa</button>
+                        <div class="dropdown-content">
+                            <NavLink to="/CrearE">Crear Empresa</NavLink>
+                            <NavLink to="/ReadE">Buscar Empresa</NavLink>
+                            {/*<NavLink to="/UpdateE">Actualizar Empresa</NavLink>*/}
+                            <NavLink to="/CreateP">Crear Puesto</NavLink>
+                        </div>
                     </div>
-                </div>
-            </ul>
+                </ul>
             </div>
         </nav>
     );

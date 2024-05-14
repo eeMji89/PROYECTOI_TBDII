@@ -1,10 +1,11 @@
 import React from 'react';
 import "./create.css";
-import { MemcacheClient,  MultiRetrievalResponse,
-    MultiCasRetrievalResponse,
-    StatsCommandResponse, } from "memcache-client";
+import { useState } from 'react'; 
+// import { MemcacheClient,  MultiRetrievalResponse,
+//     MultiCasRetrievalResponse,
+//     StatsCommandResponse, } from "memcache-client";
 export const CrearE = () => {
-    onst [empresaData, setEmpresaData] = useState({
+    const [empresaData, setEmpresaData] = useState({
         id_empresa: "",
         nombre_empresa: "",
         cif: "",

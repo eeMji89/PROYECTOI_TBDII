@@ -1,8 +1,8 @@
 import React from 'react'
 import "./create.css";
-import { MemcacheClient,  MultiRetrievalResponse,
-  MultiCasRetrievalResponse,
-  StatsCommandResponse, } from "memcache-client";
+// import { MemcacheClient,  MultiRetrievalResponse,
+//   MultiCasRetrievalResponse,
+//   StatsCommandResponse, } from "memcache-client";
 export const CreateP = () => {
   const handleGuardarPuestoTrabajo = async () => {
     const server = "tbddiicache-qwza0y.serverless.use1.cache.amazonaws.com:11211";

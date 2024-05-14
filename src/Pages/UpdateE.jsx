@@ -1,8 +1,15 @@
 import React from 'react'
 import "./create.css";
+import { useLocation } from 'react-router-dom';
+
 export const UpdateE = () => {
-  return (
-    <>
+    const location = useLocation();
+    const params = new URLSearchParams(location.search);
+
+    // Acceder a los parámetros pasados
+    const idupdate = params.get('idupdate');
+    return (
+        <>
             <form id="registroFrom" >
                 <h2>Actualizar Datos Empresa</h2>
 
